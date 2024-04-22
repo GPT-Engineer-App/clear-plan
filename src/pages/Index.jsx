@@ -1,6 +1,7 @@
 // Complete the Index page component here
 // Use chakra-ui
 import { useState } from "react";
+import Header from "../components/Header";
 import { Box, Button, Input, List, ListItem, IconButton, Text, useToast } from "@chakra-ui/react";
 import { FaPlus, FaTrash, FaCheck } from "react-icons/fa";
 import Footer from "../components/Footer";
@@ -46,6 +47,7 @@ const Index = () => {
 
   return (
     <>
+      <Header />
       <Box p={5}>
         <Box mb={4} display="flex" alignItems="center">
           <Input placeholder="Add a new task" value={input} onChange={(e) => setInput(e.target.value)} onKeyPress={(e) => e.key === "Enter" && handleAddTask()} mr={2} />
